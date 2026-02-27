@@ -1,0 +1,21 @@
+meta {
+  name: Update KV
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:3000/api/kv/primary
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "value": "green"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
